@@ -1,5 +1,5 @@
 
-import { changeColorBody, onStartBtnClick, onStopBtnClick } from './handlers';
+import { onStartBtnClick, onStopBtnClick } from './handlers';
 import { refs } from './refs';
 
         
