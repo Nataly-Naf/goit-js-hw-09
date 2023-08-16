@@ -1,7 +1,7 @@
 import { refs } from "./refs";
 let timerId = null;
 export function onStartBtnClick() {
-      setInterval(() => {
+      timerId=setInterval(() => {
        const randomColor = getRandomHexColor();
         document.body.style.backgroundColor = `${randomColor}`;
           refs.startBtn.disabled = true 
