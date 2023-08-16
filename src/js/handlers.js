@@ -14,10 +14,11 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 }
 
-export function onStopBtnClick () {
-  clearInterval(timerId);
-  refs.startBtn.disabled = false;  
+export function onStopBtnClick() {
+    refs.startBtn.disabled = false;  
   refs.stopBtn.disabled=true
+  clearInterval(timerId);
+
 }
 
 
