@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
-refs = {
+const refs = {
     btnStart: document.querySelector('[data-start]'),
     input: document.querySelector('#datetime-picker'),
     daysNum: document.querySelector('[data-days]'),
@@ -20,7 +20,7 @@ const fp=flatpickr('#datetime-picker', {
     minuteIncrement: 1,
     onClose(selectedDates) {
         console.log(selectedDates[0]);
-        selectedTime = selectedDates[0].getTime();
+        let selectedTime = selectedDates[0].getTime();
         
         if (selectedTime < currTime) {window.alert("Please choose a date in the future");
             refs.btnStart.disabled = true
