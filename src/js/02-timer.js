@@ -13,7 +13,7 @@ const currTime = currentDate.getTime();
 console.log(currTime)
 let selectedTime;
 const flatpickr = require("flatpickr");
-flatpickr(`#datetime-picker`, {
+flatpickr('#datetime-picker', {
     enableTime: true,
     time_24hr: true,
     defaultDate: null,
