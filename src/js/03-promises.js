@@ -17,7 +17,7 @@ function onFormSubmit(event) {
   
   for (let i = 0; i < amount; i += 1) {
     const promiseDelay = delay + i * delayStep; 
-    createPromise(i, promiseDelay)
+    createPromise(i+1, promiseDelay)
       .then(({ position, delay }) => {
                Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
       })
@@ -25,6 +25,7 @@ function onFormSubmit(event) {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
   }
+  refs.form.reset();
 }
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
